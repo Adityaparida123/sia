@@ -1,0 +1,171 @@
+{
+  "info": {
+    "name": "SIA Services API",
+    "_postman_id": "3b6f6e0a-b4a7-4f0f-8f89-2c8f0fa3f001",
+    "description": "Postman collection for FastAPI services prototype.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://127.0.0.1:8000"
+    }
+  ],
+  "item": [
+    {
+      "name": "Health - Home",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Predict Demand",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/predict-demand",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "predict-demand"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Predict Delay",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/predict-delay?distance=10&traffic=4&weather=2",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "predict-delay"
+          ],
+          "query": [
+            {
+              "key": "distance",
+              "value": "10"
+            },
+            {
+              "key": "traffic",
+              "value": "4"
+            },
+            {
+              "key": "weather",
+              "value": "2"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Chat",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/chat?prompt=Give%20me%203%20tips%20to%20optimize%20inventory",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "chat"
+          ],
+          "query": [
+            {
+              "key": "prompt",
+              "value": "Give me 3 tips to optimize inventory"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Insights",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/insights",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "insights"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Routes",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/routes?origin=Kolkata&destination=Bhubaneswar",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "routes"
+          ],
+          "query": [
+            {
+              "key": "origin",
+              "value": "Kolkata"
+            },
+            {
+              "key": "destination",
+              "value": "Bhubaneswar"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Weather",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/weather?city=Kolkata",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "weather"
+          ],
+          "query": [
+            {
+              "key": "city",
+              "value": "Kolkata"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
